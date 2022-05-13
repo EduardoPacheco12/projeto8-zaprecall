@@ -1,0 +1,137 @@
+body {
+    font-family: 'Recursive', sans-serif;
+    font-family: 'Righteous', cursive;
+    background-color: #FB6B6B;
+}
+
+@media (max-width: 1023px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 148px;
+    }
+
+    .home img {
+        width: 136px;
+        height: 160px;
+        margin-bottom: 20px;
+    }
+
+    .home h1 {
+        font-family: 'Righteous';
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 45px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.012em;
+        color: #FFFFFF;
+    }
+
+    .home button {
+        width: 246px;
+        height: 54px;
+        margin-top: 35px;
+        background: #FFFFFF;
+        border: 1px solid #D70900;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+
+    .home button p {
+        font-family: 'Recursive';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #D70900;
+    }
+
+    .main header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 42px;
+        margin-bottom: 50px;
+    }
+
+    .main header img {
+        width: 52px;
+        height: 60px;
+        margin-right: 25px;
+    }
+
+    .main header h1 {
+        font-family: 'Righteous';
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 45px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.012em;
+        color: #FFFFFF;
+    }
+
+    .main ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main li {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        height: 65px;
+        width: 300px;
+        margin: 0 0 25px 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .main li p {
+        margin-left: 15px;
+        font-family: 'Recursive';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+    }
+
+    .main li ion-icon {
+        position: absolute;
+        font-size: 34px;
+        right: 15px;
+    }
+
+    .main footer {
+        height: 70px;
+        background-color: #FFFFFF;
+        box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+        position:fixed;
+        bottom: 0px;
+        right: 0px; 
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main footer p {
+        font-family: 'Recursive';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #333333
+    }
+}
+
+@media (max-width: 300px) {
+    .main li {
+        width: 200px;
+    }
+}
