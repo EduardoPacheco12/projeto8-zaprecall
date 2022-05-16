@@ -1,10 +1,14 @@
+import React from "react";
 import seta from '../assets/img/setinha.png';
 
 export default function FrontCard(props) {
+    //lógica
+   
+    //UI
     return(
-        <div className='front'>
+        <li className="front">
             <p>{props.question}</p>
-            <img onClick={() => props.setShowAnswer(true)} src={seta} alt="setinha" /> 
-        </div>
+            <img onClick={() => props.setShowFlashCard("3")} src={seta} alt="setinha" /> 
+        </li> 
     );
 }

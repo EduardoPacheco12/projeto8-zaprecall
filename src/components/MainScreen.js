@@ -56,7 +56,6 @@ export default function MainScreen() {
                 <h1>ZapRecall</h1>
             </header>
             <ul className="conteudo">
-
                 {deck.map((question, index) => <Cards key={index} index={index} question={question.front} answer={question.back}/> )}
             </ul>
             <footer>

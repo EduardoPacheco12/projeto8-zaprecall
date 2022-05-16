@@ -100,7 +100,6 @@ body {
         font-weight: 700;
         font-size: 16px;
         line-height: 19px;
-        color: #333333;
     }
 
     .main .closeCards ion-icon {
@@ -109,17 +108,44 @@ body {
         right: 15px;
     }
 
-    .main .openCards {
+    .red p {
+        text-decoration-line: line-through;
+        color: #FF3030;
+    }
+
+    .red ion-icon {
+        color: #FF3030;
+    }
+
+    .yellow p {
+        text-decoration-line: line-through;
+        color: #FF922E;
+    }
+
+    .yellow ion-icon {
+        color: #FF922E;
+    }
+
+    .green p {
+        text-decoration-line: line-through;
+        color: #2FBE34;
+    }
+
+    .green ion-icon {
+        color: #2FBE34;
+    }
+
+    .main .front {
         background-color: #FFFFFF;
         box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
         border-radius: 5px;
-        height: 130px;
+        min-height: 130px;
         width: 300px;
         margin: 0 0 25px 0;
         position: relative;
     }
 
-    .main .openCards p {
+    .main .front  p {
         font-family: 'Recursive';
         font-weight: 400;
         font-size: 18px;
@@ -128,11 +154,10 @@ body {
         margin-top: 18px;
         margin-left: 10px;
         margin-right: 10px;
-        height: 55px;
-        overflow-y: auto;
+        margin-bottom: 60px;
     }
 
-    .main .openCards img {
+    .main .front img {
         position: absolute;
         width: 30px;
         height: 20px;
@@ -140,7 +165,29 @@ body {
         bottom: 6px;
     }
 
-    .main .openCards .red {
+    .main .back {
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        min-height: 130px;
+        width: 300px;
+        margin: 0 0 25px 0;
+        position: relative;
+    }
+
+    .main .back  p {
+        font-family: 'Recursive';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #333333;
+        margin-top: 18px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 60px;
+    }
+
+    .main .back .incorrect {
         position: absolute;
         width: 85px;
         height: 38px;
@@ -153,11 +200,11 @@ body {
         left: 14px;
     }
 
-    .main .openCards .yellow {
+    .main .back .neutral {
         position: absolute;
         width: 85px;
         height: 38px;
-        background-color: #FF922E;;
+        background-color: #FF922E;
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -166,7 +213,7 @@ body {
         left: 106px;
     }
 
-    .main .openCards .green {
+    .main .back .correct {
         position: absolute;
         width: 85px;
         height: 38px;
@@ -179,7 +226,7 @@ body {
         left: 198px;
     }
 
-    .main .openCards h4 {
+    .main .back h4 {
         font-family: 'Recursive';
         font-weight: 400;
         font-size: 12px;
