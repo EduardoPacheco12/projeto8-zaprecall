@@ -1,8 +1,5 @@
 import React from 'react';
 import BackCard from './BackCard';
-import CloseCardRed from './CloseCardRed';
-import CloseCardYellow from './CloseCardYellow';
-import CloseCardGreen from './CloseCardGreen';
 import CloseCards from './CloseCards';
 import FrontCard from './FrontCard';
 
@@ -25,25 +22,36 @@ export default function Cards(props) {
 
     if (showFlashCard === "3") {
         return (
-            <BackCard answer={props.answer} setShowFlashCard={setShowFlashCard}/>
+            <BackCard setDeckRespondido={props.setDeckRespondido} deckRespondido={props.deckRespondido} answer={props.answer} setShowFlashCard={setShowFlashCard}/>
         );
     } 
 
     if (showFlashCard === "4") {
         return (
-            <CloseCardRed index={props.index} />
+            <li className="closeCards red">
+                <p>Pergunta {props.index + 1}</p>
+                <ion-icon name="close-circle-sharp"></ion-icon>
+            </li>
         );
     } 
     
     if (showFlashCard === "5") {
         return (
-            <CloseCardYellow index={props.index} />
+            <li className="closeCards yellow">
+                <p>Pergunta {props.index + 1}</p>
+                <ion-icon name="help-circle-sharp"></ion-icon>
+            </li>
         );
+        
     }
     
     if(showFlashCard === "6") {
         return (
-            <CloseCardGreen index={props.index} />
+            <li className="closeCards green">
+                <p>Pergunta {props.index + 1}</p>
+                <ion-icon name="checkmark-circle-sharp"></ion-icon>
+            </li>
         );
+        
     }
 }

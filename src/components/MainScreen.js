@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from '../assets/img/logo-pequeno.png';
 import Cards from './Cards';
+import Footer from './Footer';
+import logo from '../assets/img/logo-pequeno.png';
 
 export default function MainScreen() {
     //lógica
@@ -38,8 +39,6 @@ export default function MainScreen() {
             back: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
         }
     ];
-    const[deck, setDeck] = React.useState(shuffleArray);
-    
     function shuffleArray() {
         for (let i = frontBackCards.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -47,7 +46,8 @@ export default function MainScreen() {
         }
         return frontBackCards;
     }
-
+    const[deck, setDeck] = React.useState(shuffleArray);
+    const[deckRespondido, setDeckRespondido] = React.useState([]);
     //UI
     return(
         <div className='main'>
@@ -56,11 +56,9 @@ export default function MainScreen() {
                 <h1>ZapRecall</h1>
             </header>
             <ul className="conteudo">
-                {deck.map((question, index) => <Cards key={index} index={index} question={question.front} answer={question.back}/> )}
+                {deck.map((question, index) => <Cards setDeckRespondido={setDeckRespondido} deckRespondido={deckRespondido} key={index} index={index} question={question.front} answer={question.back}/> )}
             </ul>
-            <footer>
-                <p>0/{deck.length} CONCLUÍDOS</p>
-            </footer>
+            <Footer tamanho={deckRespondido.length} deckRespondido={deckRespondido}/>
         </div>
     );  
 }
