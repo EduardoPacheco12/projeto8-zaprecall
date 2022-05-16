@@ -1,6 +1,9 @@
 import logo from '../assets/img/logo.png';
 
 export default function HomeScreen({setInit}) {
+    //lógica
+
+    
     //UI
     return(
         <div className="home">
